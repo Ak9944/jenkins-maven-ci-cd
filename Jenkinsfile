@@ -4,7 +4,7 @@ pipeline {
     environment {
         MAVEN_HOME = tool 'Maven3'
         SONARQUBE_SERVER = 'SonarQube'
-        NEXUS_CREDENTIALS = credentials('nexus-creds')
+        NEXUS_CREDENTIALS = credentials('jenkins')
         //TOMCAT_CREDENTIALS = credentials('tomcat-creds')
         TOMCAT_URL = 'http://tomcat-host:8080/manager/text'
     }
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/deopura/jenkins-maven-ci-cd.git', branch: 'main'
+                git url: 'https://github.com/Ak9944/jenkins-maven-ci-cd.git', branch: 'main'
             }
         }
 
