@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_HOME = tool 'Maven3'
+        MAVEN_HOME = tool 'Maven'
         SONARQUBE_SERVER = 'SonarQube'
         NEXUS_CREDENTIALS = credentials('jenkins')
         //TOMCAT_CREDENTIALS = credentials('tomcat-creds')
